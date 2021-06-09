@@ -15,8 +15,8 @@ $AlterarBanco = AlterarBanco($_SESSION['servidor'], $_SESSION['usuario'], $_SESS
 <body>
 
 <!-- Sidebar -->
-<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-  <h3 class="w3-bar-item"><b style="color:green">CONECTADO -</b> <?= $_SESSION['banco'] ?></h3>
+<div class="w3-sidebar w3-teal w3-bar-block" style="width:25%">
+  <h3 class="w3-bar-item"><b style="color:Black">CONECTADO -</b> <?= $_SESSION['banco'] ?></h3>
   <a href="dashboard.php" class="w3-bar-item w3-button">Dashboard</a>
   <a href="#" class="w3-bar-item w3-button">Link 2</a>
   <a href="#" class="w3-bar-item w3-button">Link 3</a>
@@ -25,7 +25,7 @@ $AlterarBanco = AlterarBanco($_SESSION['servidor'], $_SESSION['usuario'], $_SESS
 <!-- Page Content -->
 <div style="margin-left:25%">
 
-<div class="w3-container w3-teal">
+<div class="w3-container w3-brown">
   <h1>Tabelas</h1>
 </div>
 

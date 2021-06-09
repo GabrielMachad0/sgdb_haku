@@ -25,8 +25,8 @@ $conn2 = ConectarBanco($_SESSION['servidor'], $_SESSION['usuario'], $_SESSION['s
 <body>
 
 <!-- Sidebar -->
-<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-  <h3 class="w3-bar-item">Menu</h3>
+<div class="w3-sidebar w3-teal w3-bar-block" style="width:25%">
+  <h3 class="w3-bar-item ">Menu</h3>
   <a href="dashboard.php" class="w3-bar-item w3-button">Dashboard</a>
   <a href="#" class="w3-bar-item w3-button">Link 2</a>
   <a href="#" class="w3-bar-item w3-button">Link 3</a>
@@ -35,7 +35,7 @@ $conn2 = ConectarBanco($_SESSION['servidor'], $_SESSION['usuario'], $_SESSION['s
 <!-- Page Content -->
 <div style="margin-left:25%">
 
-<div class="w3-container w3-teal">
+<div class="w3-container w3-brown">
   <h1>Bancos disponiveis:</h1>
 </div>
 
