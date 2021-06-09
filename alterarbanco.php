@@ -39,7 +39,7 @@ $sql = "SHOW TABLES";
 $result = mysqli_query($AlterarBanco, $sql);
 $tables = "Tables_in_".$banco;
   while($row = mysqli_fetch_assoc($result)) {
-    echo "<hr> <br><b>Tabela:</b> <br>" . $row[$tables] . " <br> <hr>";
+    echo "<hr> <br><b><h2>TABELA:</b> " . $row[$tables] . " </h2> <hr>";
 
 $sql = "SHOW COLUMNS FROM ".$row[$tables];
 $result_columns = mysqli_query($AlterarBanco, $sql);
