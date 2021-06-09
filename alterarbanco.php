@@ -37,10 +37,46 @@ if ($AlterarBanco) {
 	
 $sql = "SHOW TABLES";
 $result = mysqli_query($AlterarBanco, $sql);
-
+$tables = "Tables_in_".$banco;
   while($row = mysqli_fetch_assoc($result)) {
-  	$tables = "Tables_in_".$banco;
-    echo "<b>Tabela:</b> <br>" . $row[$tables] . " <br><br>";
+    echo "<hr> <br><b>Tabela:</b> <br>" . $row[$tables] . " <br> <hr>";
+
+$sql = "SHOW COLUMNS FROM ".$row[$tables];
+$result_columns = mysqli_query($AlterarBanco, $sql);
+  while($row = mysqli_fetch_assoc($result_columns)) {
+  
+    echo "
+     
+     <div class='w3-container'>
+  <table class='w3-table-all w3-hoverable'>
+    <thead>
+      <tr class='w3-light-grey'>
+        <th style='width:20%' >COLUNA</th>
+        <th style='width:20%' >TIPO</th>
+        <th style='width:20%' >NULL</th>
+        <th style='width:20%' >CHAVE</th>
+        <th style='width:20%' >PADRAO</th>
+      </tr>
+    </thead>
+    <tr>
+      <td style='width:20%'>{$row['Field']}</td>
+      <td style='width:20%'>{$row['Type']}</td>
+      <td style='width:20%'>{$row['Null']}</td>
+      <td style='width:20%'>{$row['Key']}</td>
+      <td style='width:20%'>{$row['Default']}</td>
+    </tr>
+   
+  </table>
+</div>
+
+
+
+    ";
+
+
+
+  }
+
 
   }
 
@@ -56,6 +92,22 @@ $result = mysqli_query($AlterarBanco, $sql);
 
 </div>
       
+
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace("w3-black", "w3-red");
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace("w3-red", "w3-black");
+  }
+}
+</script>
+
 </body>
 </html>
 
