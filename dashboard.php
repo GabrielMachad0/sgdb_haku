@@ -15,6 +15,7 @@ $_SESSION['senha']    = $senha;
 $_SESSION['servidor'];
 $_SESSION['usuario'];
 $_SESSION['senha'];
+$_SESSION['banco'];
 }
 
 
@@ -39,8 +40,22 @@ $conn2 = ConectarBanco($_SESSION['servidor'], $_SESSION['usuario'], $_SESSION['s
 <div class="w3-sidebar w3-teal w3-bar-block" style="width:25%">
   <h3 class="w3-bar-item ">Menu</h3>
   <a href="dashboard.php" class="w3-bar-item w3-button">Dashboard</a>
-  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="scriptsql.php" class="w3-bar-item w3-button">Script SQL</a>
   <a href="#" class="w3-bar-item w3-button">Link 3</a>
+
+  <div class="w3-card-4" style="position: absolute; bottom: 0; width: 100%;">
+  <div class="w3-container w3-brown">
+    <h2>CODIGO SQL</h2>
+  </div>
+  <form class="w3-container" >
+    <p>      
+    <label class="w3-text-brown"><b></b></label>
+    <textarea class="w3-input w3-border w3-sand" name="sql"></textarea>
+    <p>      
+   
+    <button class="w3-btn w3-brown">Rodar</button></p>
+  </form>
+</div>
 </div>
 
 <!-- Page Content -->
