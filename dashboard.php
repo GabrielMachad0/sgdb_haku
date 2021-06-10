@@ -1,6 +1,8 @@
 <?php
 include("./func/func_con.php");
 session_start();
+
+if(isset($_POST['servidor'])){
 $servidor = $_POST['servidor'];
 $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
@@ -8,6 +10,15 @@ $senha = $_POST['senha'];
 $_SESSION['servidor'] = $servidor;
 $_SESSION['usuario']  = $usuario;
 $_SESSION['senha']    = $senha;
+}else{
+
+$_SESSION['servidor'];
+$_SESSION['usuario'];
+$_SESSION['senha'];
+}
+
+
+
 
 
 $conn2 = ConectarBanco($_SESSION['servidor'], $_SESSION['usuario'], $_SESSION['senha']);
